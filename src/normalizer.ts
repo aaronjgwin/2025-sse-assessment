@@ -56,7 +56,7 @@ export async function normalize(): Promise<UserRecord> {
   const fullNamePropertyRegex = /(full|name)/i;
   const fullNamePropertyFirstRegex = /(first)/;
   const fullNamePropertyLastRegex =  /(last)/i;
-  const emailPropertyRegex = /(email|address)/i;
+  const emailPropertyRegex = /(email|e-mail)/i;
   const statusPropertyRegex = /(account|status)/i;
   const createdAtPropertyRegex = /(created|joined)/i;
   const phonePropertyRegex = /\bcontact\b|phone/i;
@@ -196,6 +196,7 @@ export async function normalize(): Promise<UserRecord> {
             break;
 
           default:
+            // add logging for unmatched property names. que for human intervention 
             break;
         }
         break;
