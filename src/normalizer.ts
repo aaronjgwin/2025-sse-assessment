@@ -225,7 +225,7 @@ export async function normalize(): Promise<UserRecord> {
         break;
 
       default:
-        // add logging for unmatched property names. que for human intervention 
+        // add logging for unmatched property names. queue for human intervention 
         break;
     }
 
