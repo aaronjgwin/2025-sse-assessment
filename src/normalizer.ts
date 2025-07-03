@@ -90,7 +90,7 @@ export async function normalize(): Promise<UserRecord> {
           case "object":
             const subkeys = Object.keys(dataValue);
             const name = { first: "", last: "", print: function(){
-              return this.first + " " + this.last;
+              return this.first + " " + this.last; break; 
             }};
 
             for (const sub in subkeys) {
